@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savoria — Fine Dining Restaurant</title>
+  <meta name="description" content="Savoria — an exquisite fine dining experience. Hand-crafted dishes, warm ambiance, and unforgettable evenings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Developed by Mostafa<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#reservation" class="nav-link">Reservations</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Welcome to Savoria</p>
+      <h1 class="hero-title">Taste the Art of<br /><span class="accent">Fine Dining</span></h1>
+      <p class="hero-tagline">Hand-crafted dishes, warm ambiance, and unforgettable evenings — where every bite tells a story.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">View Menu</a>
+        <a href="#reservation" class="btn btn-ghost">Book a Table</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-image">
+        <div class="about-img-main"></div>
+        <div class="about-badge">
+          <span class="badge-number">12+</span>
+          <span class="badge-text">Years of<br />Excellence</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-title">A Passion for<br />Flavor &amp; Craft</h2>
+        <p class="about-lead">
+          Born from a love of honest ingredients and timeless technique, Savoria has been
+          serving the city's most memorable meals since 2012.
+        </p>
+        <p>
+          Our kitchen is led by Chef Marco Bellini, whose philosophy is simple: respect the
+          ingredient, honor the season, and never rush the plate. From our wood-fired oven to
+          our candlelit dining room, every detail is designed to make you slow down and savor.
+        </p>
+        <div class="about-features">
+          <div class="feature">
+            <i class="fas fa-leaf"></i>
+            <div>
+              <h4>Farm to Table</h4>
+              <p>Locally sourced, seasonal produce.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <i class="fas fa-fire"></i>
+            <div>
+              <h4>Wood-Fired</h4>
+              <p>Authentic flavors, slow cooked.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <i class="fas fa-wine-glass-alt"></i>
+            <div>
+              <h4>Curated Cellar</h4>
+              <p>Over 200 hand-picked wines.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <i class="fas fa-heart"></i>
+            <div>
+              <h4>Made with Love</h4>
+              <p>Every dish crafted with care.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="section menu-section" id="menu">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-eyebrow">Discover</p>
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">A curated selection of dishes crafted to delight every palate.</p>
+      </div>
+      <div class="menu-tabs" role="tablist">
+        <button class="menu-tab active" data-category="appetizers" role="tab" aria-selected="true">Appetizers</button>
+        <button class="menu-tab" data-category="mains" role="tab" aria-selected="false">Main Courses</button>
+        <button class="menu-tab" data-category="desserts" role="tab" aria-selected="false">Desserts</button>
+        <button class="menu-tab" data-category="drinks" role="tab" aria-selected="false">Drinks</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <section class="section reservation" id="reservation">
+    <div class="container reservation-grid">
+      <div class="reservation-info">
+        <p class="section-eyebrow">Reserve</p>
+        <h2 class="section-title">Book Your Table</h2>
+        <p>
+          Whether it's an intimate dinner for two or a celebration with friends, we'd love to
+          host you. Reserve your table and let us take care of the rest.
+        </p>
+        <ul class="reservation-highlights">
+          <li><i class="fas fa-check-circle"></i> Instant confirmation</li>
+          <li><i class="fas fa-check-circle"></i> Flexible seating options</li>
+          <li><i class="fas fa-check-circle"></i> Dietary accommodations available</li>
+        </ul>
+      </div>
+      <form class="reservation-form" id="reservationForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <select id="guests" name="guests" required>
+            <option value="" disabled selected>Select guests</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7+">7+ Guests</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Special Requests (optional)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Allergies, celebrations, seating preferences..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Confirm Reservation</button>
+        <p class="form-message" id="formMessage"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-eyebrow">Get in Touch</p>
+        <h2 class="section-title">Contact &amp; Location</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address</h4>
+              <p>124 Culinary Lane, Downtown<br />New York, NY 10001</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+12125550147">+1 (212) 555-0147</a></p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:hello@savoria.com">hello@savoria.com</a></p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Opening Hours</h4>
+              <p>Mon–Thu: 12:00 PM – 10:00 PM<br />Fri–Sun: 12:00 PM – 11:30 PM</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-inner">
+            <i class="fas fa-map-marked-alt"></i>
+            <p>Google Maps Embed Placeholder</p>
+            <span>124 Culinary Lane, Downtown, NY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo">Savoria<span>.</span></a>
+        <p>Fine dining, crafted with heart. Serving unforgettable moments since 2012.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservation">Reservations</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Subscribe for seasonal menus &amp; events.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email" required />
+          <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Savoria Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
